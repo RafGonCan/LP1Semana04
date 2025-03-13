@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text;
 
 namespace BetterDecorador
@@ -25,7 +26,7 @@ namespace BetterDecorador
             }
             else
             {
-                Console.WriteLine("You are missing some args!");
+                Console.WriteLine(Decor());
             }
         }
         /// <summary>
@@ -46,6 +47,11 @@ namespace BetterDecorador
             }
 
             return $"{decors} {s} {decors}";
+        }
+        
+        private static string Decor ()
+        {
+            return Decor("User did not specify args!", '=', 3);
         }
     }
 }
