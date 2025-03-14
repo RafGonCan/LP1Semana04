@@ -6,7 +6,9 @@ namespace Special
     {
         private static void Main(string[] args)
         {
-            
+            Console.WriteLine(GetSpecial(0));
+            Console.WriteLine(GetSpecial(2));
+            Console.WriteLine(GetSpecial(7));
         }
         private static int GetSpecial (int n)
         {
