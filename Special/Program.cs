@@ -6,12 +6,20 @@ namespace Special
     {
         private static void Main(string[] args)
         {
-            GetSpecial(0);
+            
         }
         private static int GetSpecial (int n)
         {
-            int [] numbers = new int [] {0, 1, 1, 3, 5, 11, 21, 43, 85, 171, 341};
-            
+              if (n == 0)
+              {
+                return 0;
+              }
+              else if (n == 1)
+              {
+                return 1;
+              }
+
+              return GetSpecial(n - 1) + 2 * GetSpecial(n - 2);
         }
     }
 }
