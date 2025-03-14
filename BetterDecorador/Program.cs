@@ -48,7 +48,11 @@ namespace BetterDecorador
 
             return $"{decors} {s} {decors}";
         }
-        
+        /// <summary>
+        /// if the user does not give the required args or does not enter any args at all
+        /// print a warning sentence
+        /// </summary>
+        /// <returns> "=== User did not specify args! ==="</returns>
         private static string Decor ()
         {
             return Decor("User did not specify args!", '=', 3);
